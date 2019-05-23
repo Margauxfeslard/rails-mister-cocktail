@@ -1,0 +1,6 @@
+<div class="container">
+<%= simple_form_for [@cocktail] do |c| %>
+   <p class="text"><%= c.input :name %></p>
+  <%= c.submit "Add to list", class: "btn btn-outline-dark" %>
+<% end %>
+</div>
