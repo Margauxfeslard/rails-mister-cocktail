@@ -1,6 +1,21 @@
-<div class="container">
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <%= link_to "< Back to list", cocktails_path, class: "nav-link active" %>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="container" style="width:250px">
 <%= simple_form_for [@cocktail] do |c| %>
-   <p class="text"><%= c.input :name %></p>
+  <p class="text"><%= c.input :name %></p>
+  <%= c.input :photo %>
+  <%= c.input :photo_cache, as: :hidden %>
   <%= c.submit "Add to list", class: "btn btn-outline-dark" %>
 <% end %>
 </div>

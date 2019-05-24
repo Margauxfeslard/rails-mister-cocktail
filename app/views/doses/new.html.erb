@@ -1,6 +1,23 @@
-<%= simple_form_for [@cocktail, @dose] do |r| %>
-  <%= r.input :amount%>
-  <%= r.input :description %>
-  <%= r.association :ingredient %>
-  <%= r.submit "Add to dose", class: "btn btn-primary" %>
-<% end %>
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <%= link_to "< Back to list", cocktails_path, class: "nav-link active" %>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="container">
+  <div class="add-dose">
+  <%= simple_form_for [@cocktail, @dose] do |r| %>
+   <p><%= r.input :amount%></p>
+    <p><%= r.input :description %></p>
+    <p><%= r.association :ingredient %></p>
+    <%= r.submit "Add to dose", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
