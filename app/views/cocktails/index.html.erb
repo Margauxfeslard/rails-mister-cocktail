@@ -13,7 +13,7 @@
          url('<%= cl_image_path cocktail.photo, height: 300, width: 400, crop: :fill %>')">
       <h5 class="card-title p-1"><%= cocktail.name %></h5>
       <div class="button">
-      <p><%= link_to "See details", cocktail_path(cocktail), class: "btn btn-outline-dark color-2A6763"%></p>
+      <p><%= link_to "Details", cocktail_path(cocktail), class: "btn btn-outline-dark"%></p>
       <p><%= link_to "Delete", cocktail_path(cocktail), method: :delete, class: "btn btn-outline-dark"%></p>
       </div>
     </div>
